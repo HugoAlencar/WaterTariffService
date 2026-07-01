@@ -22,12 +22,14 @@ A tariff table is the basis of tariff calculation. Each table has one or more pr
 <br>Below is a tariff table example:
 <br>
 
+
 | Range start | Range end | Range price (R\$/m³) |
-| ---------------------------------------------- |
+| ------------|-----------|--------------------- |
 |         0m³ |      10m³ |        R\$ 6.17 / m³ |
 |        11m³ |      20m³ |        R\$ 4.19 / m³ |
 |        21m³ |      30m³ |        R\$ 4.50 / m³ |
 |        31m³ |  no limit |        R\$ 5.00 / m³ |
+
 
 The first range must start at 0m³ and the last range must not have an end. Also, they must be contiguous, i.e. they can never overlap and neither have gaps between them.
 
@@ -42,7 +44,7 @@ The table used as the basis for the water tariff calculation is the one targeted
 Consider the following table as the tariff table for a client's category:
 
 | Range start | Range end | Range price (R\$/m³) |
-| ---------------------------------------------- |
+| ------------|-----------|--------------------- |
 |         0m³ |      10m³ |        R\$ 4.00 / m³ |
 |        11m³ |      20m³ |        R\$ 4.50 / m³ |
 |        21m³ |      30m³ |        R\$ 5.50 / m³ |
