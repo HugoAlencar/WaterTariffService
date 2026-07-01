@@ -1,0 +1,247 @@
+{
+  "info": {
+    "_postman_id": "0824cb45-dbc9-46a5-9f90-a0622691603a",
+    "name": "Grupos RAS WaterTariffService",
+    "description": "### Welcome to Postman! This is your first collection.\n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests  \n• Test your API in real-world scenarios  \n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "56203180",
+    "_collection_link": "https://go.postman.co/collection/56203180-0824cb45-dbc9-46a5-9f90-a0622691603a?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Get all category tariff tables test",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/api/tabelas-tarifarias",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "tabelas-tarifarias"
+          ]
+        },
+        "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+      },
+      "response": []
+    },
+    {
+      "name": "Create all category tariff tables test",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"tabelas\": [\r\n                {\r\n            \"categoria\": \"COMERCIAL\",\r\n            \"tabela\": [\r\n                {\r\n                    \"faixa\": {\r\n                        \"inicio\": 0,\r\n                        \"fim\": 10\r\n                    },\r\n                    \"valorUnitario\": 1.11\r\n                },\r\n                {\r\n                    \"faixa\": {\r\n                        \"inicio\": 11,\r\n                        \"fim\": 20\r\n                    },\r\n                    \"valorUnitario\": 2.22\r\n                },\r\n                {\r\n                    \"faixa\": {\r\n                        \"inicio\": 21,\r\n                        \"fim\": 30\r\n                    },\r\n                    \"valorUnitario\": 3.33\r\n                },\r\n                {\r\n                    \"faixa\": {\r\n                        \"inicio\": 31\r\n                    },\r\n                    \"valorUnitario\": 4.44\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"categoria\": \"INDUSTRIAL\",\r\n            \"tabela\": [\r\n                {\r\n                    \"faixa\": {\r\n                        \"inicio\": 0,\r\n                        \"fim\": 10\r\n                    },\r\n                    \"valorUnitario\": 1.23\r\n                },\r\n                {\r\n                    \"faixa\": {\r\n                        \"inicio\": 11,\r\n                        \"fim\": 20\r\n                    },\r\n                    \"valorUnitario\": 2.34\r\n                },\r\n                {\r\n                    \"faixa\": {\r\n                        \"inicio\": 21,\r\n                        \"fim\": 30\r\n                    },\r\n                    \"valorUnitario\": 3.45\r\n                },\r\n                {\r\n                    \"faixa\": {\r\n                        \"inicio\": 31\r\n                    },\r\n                    \"valorUnitario\": 4.56\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"categoria\": \"PARTICULAR\",\r\n            \"tabela\": [\r\n                {\r\n                    \"faixa\": {\r\n                        \"inicio\": 0,\r\n                        \"fim\": 10\r\n                    },\r\n                    \"valorUnitario\": 6.78\r\n                },\r\n                {\r\n                    \"faixa\": {\r\n                        \"inicio\": 11,\r\n                        \"fim\": 20\r\n                    },\r\n                    \"valorUnitario\": 7.89\r\n                },\r\n                {\r\n                    \"faixa\": {\r\n                        \"inicio\": 21,\r\n                        \"fim\": 30\r\n                    },\r\n                    \"valorUnitario\": 8.90\r\n                },\r\n                {\r\n                    \"faixa\": {\r\n                        \"inicio\": 31\r\n                    },\r\n                    \"valorUnitario\": 9.10\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"categoria\": \"PÚBLICO\",\r\n            \"tabela\": [\r\n                {\r\n                    \"faixa\": {\r\n                        \"inicio\": 0,\r\n                        \"fim\": 10\r\n                    },\r\n                    \"valorUnitario\": 6.78\r\n                },\r\n                {\r\n                    \"faixa\": {\r\n                        \"inicio\": 11,\r\n                        \"fim\": 20\r\n                    },\r\n                    \"valorUnitario\": 7.77\r\n                },\r\n                {\r\n                    \"faixa\": {\r\n                        \"inicio\": 21,\r\n                        \"fim\": 30\r\n                    },\r\n                    \"valorUnitario\": 9.99\r\n                },\r\n                {\r\n                    \"faixa\": {\r\n                        \"inicio\": 31\r\n                    },\r\n                    \"valorUnitario\": 11.11\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/tabelas-tarifarias",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "tabelas-tarifarias"
+          ]
+        },
+        "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+      },
+      "response": []
+    },
+    {
+      "name": "Create all category tariff tables fail test",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"tabelas\": [\r\n                {\r\n            \"categoria\": \"COMERCIAL\",\r\n            \"tabela\": [\r\n                {\r\n                    \"faixa\": {\r\n                        \"inicio\": 0,\r\n                        \"fim\": 10\r\n                    },\r\n                    \"valorUnitario\": 1.11\r\n                },\r\n                {\r\n                    \"faixa\": {\r\n                        \"inicio\": 11,\r\n                        \"fim\": 20\r\n                    },\r\n                    \"valorUnitario\": 2.22\r\n                },\r\n                {\r\n                    \"faixa\": {\r\n                        \"inicio\": 21,\r\n                        \"fim\": 30\r\n                    },\r\n                    \"valorUnitario\": 3.33\r\n                },\r\n                {\r\n                    \"faixa\": {\r\n                        \"inicio\": 31\r\n                    },\r\n                    \"valorUnitario\": 4.44\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"categoria\": \"COMERCIAL\",\r\n            \"tabela\": [\r\n                {\r\n                    \"faixa\": {\r\n                        \"inicio\": 0,\r\n                        \"fim\": 10\r\n                    },\r\n                    \"valorUnitario\": 1.23\r\n                },\r\n                {\r\n                    \"faixa\": {\r\n                        \"inicio\": 11,\r\n                        \"fim\": 20\r\n                    },\r\n                    \"valorUnitario\": 2.34\r\n                },\r\n                {\r\n                    \"faixa\": {\r\n                        \"inicio\": 21,\r\n                        \"fim\": 30\r\n                    },\r\n                    \"valorUnitario\": 3.45\r\n                },\r\n                {\r\n                    \"faixa\": {\r\n                        \"inicio\": 31\r\n                    },\r\n                    \"valorUnitario\": 4.56\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"categoria\": \"PARTICULAR\",\r\n            \"tabela\": [\r\n                {\r\n                    \"faixa\": {\r\n                        \"inicio\": 0,\r\n                        \"fim\": 10\r\n                    },\r\n                    \"valorUnitario\": 6.78\r\n                },\r\n                {\r\n                    \"faixa\": {\r\n                        \"inicio\": 11,\r\n                        \"fim\": 20\r\n                    },\r\n                    \"valorUnitario\": 7.89\r\n                },\r\n                {\r\n                    \"faixa\": {\r\n                        \"inicio\": 21,\r\n                        \"fim\": 30\r\n                    },\r\n                    \"valorUnitario\": 8.90\r\n                },\r\n                {\r\n                    \"faixa\": {\r\n                        \"inicio\": 31\r\n                    },\r\n                    \"valorUnitario\": 9.10\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"categoria\": \"PÚBLICO\",\r\n            \"tabela\": [\r\n                {\r\n                    \"faixa\": {\r\n                        \"inicio\": 0,\r\n                        \"fim\": 10\r\n                    },\r\n                    \"valorUnitario\": 6.78\r\n                },\r\n                {\r\n                    \"faixa\": {\r\n                        \"inicio\": 11,\r\n                        \"fim\": 20\r\n                    },\r\n                    \"valorUnitario\": 7.77\r\n                },\r\n                {\r\n                    \"faixa\": {\r\n                        \"inicio\": 21,\r\n                        \"fim\": 30\r\n                    },\r\n                    \"valorUnitario\": 9.99\r\n                },\r\n                {\r\n                    \"faixa\": {\r\n                        \"inicio\": 31\r\n                    },\r\n                    \"valorUnitario\": 11.11\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/tabelas-tarifarias",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "tabelas-tarifarias"
+          ]
+        },
+        "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+      },
+      "response": []
+    },
+    {
+      "name": "Upload category tariff tables file test",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "arquivo",
+              "type": "file",
+              "uuid": "82fff0a6-79bb-43cb-8d22-47eb600d8c0f",
+              "src": "/D:/Hugo/Dev/Testes de emprego/Grupos RAS/WaterTariffService/tabelas_tarifarias.json"
+            }
+          ]
+        },
+        "url": {
+          "raw": "localhost:8080/api/tabelas-tarifarias/upload",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "tabelas-tarifarias",
+            "upload"
+          ]
+        },
+        "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+      },
+      "response": []
+    },
+    {
+      "name": "Calculate tariff test",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Successful POST request\", function () {",
+              "    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+              "});",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"categoria\": \"INDUSTRIAL\",\n    \"consumo\": 45\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/tarifa",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "tarifa"
+          ]
+        },
+        "description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+      },
+      "response": []
+    },
+    {
+      "name": "Delete water tariff table test",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/api/tabelas-tarifarias/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "tabelas-tarifarias",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
